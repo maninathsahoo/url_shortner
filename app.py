@@ -39,9 +39,6 @@ def shorten_url():
         "short_url": f"/api/redirect/{short_code}"  # Relative path for API consistency
     })
 
-
-
-
 @app.route('/api/redirect/<short_code>', methods=['GET'])
 def redirect_to_original(short_code):
     """API endpoint for redirection"""

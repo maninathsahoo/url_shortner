@@ -12,5 +12,6 @@ def get_domain(url):
     try:
         parsed = urlparse(url)
         return parsed.netloc if parsed.netloc else "invalid_domain"
+
     except:
         return "invalid_domain"

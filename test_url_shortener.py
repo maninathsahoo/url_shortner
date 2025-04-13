@@ -84,7 +84,7 @@ class TestURLShortener(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         metrics = response.get_json()['top_domains']
 
-        # Should be example.com:2, github.com:2, google.com:1
+
         self.assertEqual(metrics['example.com'], 2)
         self.assertEqual(metrics['github.com'], 2)
         self.assertEqual(metrics['google.com'], 1)
